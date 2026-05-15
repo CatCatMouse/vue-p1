@@ -2,7 +2,6 @@ import router from '@/routers/index';
 import {useAuthStore} from "@/stores/modules/auth"
 
 const modules = import.meta.glob('@/views/**/*.vue')
-console.log(3, modules)
 /**
  * @description 初始化动态路由
  */
@@ -11,10 +10,9 @@ export const initDynamicRouter = async () => {
     const authStore = useAuthStore();
     await authStore.getAuthMenuList();
 
-    console.log(authStore.authMenuListGet)
     authStore.authMenuList.forEach(element => {
-        if (element.compoent && typeof element.compoent === "string") {
-            element.compoent = modules["/src/views" + element.compoent + ".vue"]
+        if (element.component && typeof element.component === "string") {
+            element.component = modules["/src/views" + element.component + ".vue"]
         }
         router.addRoute(element)
     });

@@ -4,6 +4,5 @@ export const getAuthMenuListApi = () => {
     const data = [
         {id: 1,name:"home",path:"/home/index",component:"/home/index"}
     ]
-    console.log(2, data)
     return data
 }

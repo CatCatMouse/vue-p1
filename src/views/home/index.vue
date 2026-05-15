@@ -6,6 +6,6 @@
 
 <script setup name="home"></script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
 @use "./index"
 </style>

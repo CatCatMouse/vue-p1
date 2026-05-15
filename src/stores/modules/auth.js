@@ -13,7 +13,6 @@ export const useAuthStore = defineStore('geeker-auth',{
         // 异步获取菜单权限列表
         async getAuthMenuList() {
             const data = await getAuthMenuListApi()
-            console.log(1, data)
             this.authMenuList = data
         }
     }
